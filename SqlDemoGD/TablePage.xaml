@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SqlDemoGD.TablePage"
+	Title="Employee Pay">
+	<StackLayout Orientation="Vertical">
+
+		<ListView x:Name="dbTable" RowHeight="85">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell >
+						<ViewCell.ContextActions>
+            				<MenuItem x:Name="Add5K" Text="Add £5K" />
+            				<MenuItem x:Name="Add10K" Text="Add £10K" />
+         				</ViewCell.ContextActions>
+						<ViewCell.View>
+							<StackLayout Orientation="Horizontal" Padding="15,5,15,5">
+								<StackLayout Orientation="Vertical">
+									<Label Text="{Binding FullName}" FontSize="Large"/>
+									<Label Text="{Binding SSN}" FontSize="Medium" TextColor="Gray"/>
+									<StackLayout Orientation="Horizontal">
+										<Label Text="DOB: " FontSize="Small" TextColor="Gray"/>
+										<Label Text="{Binding DOB}" FontSize="Small" TextColor="Gray"/>
+									</StackLayout>
+								</StackLayout>
+								<StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="Center" Padding="0,10,10,10">
+									<Frame BackgroundColor="#EBEFEF" WidthRequest="72" HeightRequest="55" HasShadow="false" Padding="5,5,5,5">
+										<Label VerticalOptions="Center" Text="{Binding Salary}" TextColor="Black" FontSize="Medium" HorizontalOptions="End"/>
+									</Frame>
+								</StackLayout>
+							</StackLayout>
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+	</StackLayout>
+</ContentPage>

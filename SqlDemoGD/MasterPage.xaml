@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="SqlDemoGD.MasterPage"
+	Title="Menu"
+	BackgroundImage="MasterPageBkgnd.png">
+
+	<StackLayout Orientation="Vertical" Padding="15,55,0,0" HorizontalOptions="Start">
+		<Label Text="Database Options" TextColor="White" HorizontalOptions="Start" FontSize="Large"/>
+		<StackLayout Orientation="Vertical" Padding="30,40,0,0">
+			<Button Text="Create DB" x:Name="btnCreate" TextColor="White" HorizontalOptions="Start"/>
+			<Button Text="Insert Rows" x:Name="btnInsert" TextColor="White" HorizontalOptions="Start"/>
+			<Button Text="Query" x:Name="btnQuery" TextColor="White" HorizontalOptions="Start"/>
+		</StackLayout>
+	</StackLayout>
+
+</ContentPage>
